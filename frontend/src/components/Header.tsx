@@ -1,7 +1,8 @@
 import React from "react";
+import { ICourse } from "../index";
 
-const Header: React.FC<{ course: string }> = ({ course }) => {
-    return <h1>{course}</h1>;
+const Header: React.FC<{ courseData: ICourse }> = ({ courseData }) => {
+    return <h1>{courseData.name}</h1>;
 };
 
 export default Header;
