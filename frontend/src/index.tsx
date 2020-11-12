@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import Button from "./components/Button";
 import Statistics from "./components/Statistics";
 
 export type IData = [number, number, number];
@@ -14,24 +15,12 @@ const App = () => {
         <div>
             <h1>give feedback</h1>
             <div>
-                <button
-                    style={{ display: "inline-block", paddingLeft: "5px" }}
-                    onClick={() => setGood(good + 1)}
-                >
-                    good
-                </button>
-                <button
-                    style={{ display: "inline-block", paddingLeft: "5px" }}
-                    onClick={() => setNeutral(neutral + 1)}
-                >
-                    neutral
-                </button>
-                <button
-                    style={{ display: "inline-block", paddingLeft: "5px" }}
-                    onClick={() => setBad(bad + 1)}
-                >
-                    bad
-                </button>
+                <Button text="good" onClickFunction={() => setGood(good + 1)} />
+                <Button
+                    text="neutral"
+                    onClickFunction={() => setNeutral(neutral + 1)}
+                />
+                <Button text="bad" onClickFunction={() => setBad(bad + 1)} />
             </div>
             <h1>statistics</h1>
             {good || neutral || bad ? (
