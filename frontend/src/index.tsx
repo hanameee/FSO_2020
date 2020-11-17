@@ -1,11 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Anecdotes from "./components/Anecdotes/Anecdotes";
+import Course from "./components/Course/Course";
 
-export type IData = [number, number, number];
+export interface ICourseData {
+    name: string;
+    exercises: number;
+    id: number;
+}
 
+export interface ICourse {
+    id: number;
+    name: string;
+    parts: ICourseData[];
+}
 const App = () => {
-    return <Anecdotes />;
+    const [courses, setCourses] = useState<ICourse[]>([
+        {
+            name: "Half Stack application development",
+            id: 1,
+            parts: [
+                {
+                    name: "Fundamentals of React",
+                    exercises: 10,
+                    id: 1,
+                },
+                {
+                    name: "Using props to pass data",
+                    exercises: 7,
+                    id: 2,
+                },
+                {
+                    name: "State of a component",
+                    exercises: 14,
+                    id: 3,
+                },
+                {
+                    name: "Redux",
+                    exercises: 11,
+                    id: 4,
+                },
+            ],
+        },
+        {
+            name: "Node.js",
+            id: 2,
+            parts: [
+                {
+                    name: "Routing",
+                    exercises: 3,
+                    id: 1,
+                },
+                {
+                    name: "Middlewares",
+                    exercises: 7,
+                    id: 2,
+                },
+            ],
+        },
+    ]);
+    return (
+        <>
+            {courses.map((course) => (
+                <Course courseData={course} />
+            ))}
+        </>
+    );
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
