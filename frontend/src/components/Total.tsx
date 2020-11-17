@@ -6,7 +6,12 @@ const Total: React.FC<{ courseData: ICourse }> = ({ courseData }) => {
         (cur, acc) => (acc.exercises += cur),
         0
     );
-    return <p>Number of exercises {totalNumber}</p>;
+    console.log(courseData, totalNumber);
+    return (
+        <p>
+            <b>total of {totalNumber} exercises</b>
+        </p>
+    );
 };
 
 export default Total;
