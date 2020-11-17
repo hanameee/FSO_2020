@@ -1,5 +1,5 @@
 import React from "react";
-import { ICourse } from "../index";
+import { ICourse } from "../../index";
 import Content from "./Content";
 import Header from "./Header";
 import Total from "./Total";

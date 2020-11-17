@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Course from "./components/Course";
+import Course from "./components/Course/Course";
 
 export interface ICourseData {
     name: string;

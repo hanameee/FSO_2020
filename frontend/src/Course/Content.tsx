@@ -1,6 +1,6 @@
 import React from "react";
 import Part from "./Part";
-import { ICourse } from "../index";
+import { ICourse } from "../../index";
 
 const Content: React.FC<{ courseData: ICourse }> = ({ courseData }) => (
     <div>
