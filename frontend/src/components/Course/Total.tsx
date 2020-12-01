@@ -1,5 +1,5 @@
 import React from "react";
-import { ICourse } from "../../index";
+import { ICourse } from "./Course";
 
 const Total: React.FC<{ courseData: ICourse }> = ({ courseData }) => {
     const totalNumber = courseData.parts.reduce(

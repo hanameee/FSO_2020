@@ -1,5 +1,5 @@
 import React from "react";
-import { IData } from "../../index";
+import { IData } from "./Unicafe";
 import Statistic from "./Statistic";
 const Statistics: React.FC<{ data: IData }> = ({ data }) => {
     const [good, neutral, bad] = data;
